@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen_navigation"
+    app:startDestination="@id/matchSummeryFragment">
+
+    <fragment
+        android:id="@+id/matchSummeryFragment"
+        android:name="com.example.cricketmatchdetails.MatchSummeryFragment"
+        android:label="fragment_match_summery"
+        tools:layout="@layout/fragment_match_summery" >
+        <action
+            android:id="@+id/action_matchSummeryFragment_to_scorecardFragment"
+            app:destination="@id/scorecardFragment" >
+<!--            <argument-->
+<!--                android:name="Team"-->
+<!--                app:argType="com.example.cricketmatchdetails.model.Team" />-->
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/scorecardFragment"
+        android:name="com.example.cricketmatchdetails.ScorecardFragment"
+        android:label="fragment_scorecard"
+        tools:layout="@layout/fragment_scorecard" >
+
+    </fragment>
+</navigation>

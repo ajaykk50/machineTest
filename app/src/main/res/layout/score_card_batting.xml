@@ -1,0 +1,184 @@
+<!-- player_item.xml -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:padding="10dp"
+        android:background="@color/lightblue"
+        android:id="@+id/llTitla"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:singleLine="true"
+            android:text="Batsman" />
+
+        <TextView
+            android:gravity="end"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:text="R" />
+
+        <TextView
+            android:gravity="end"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:text="B" />
+
+        <TextView
+            android:gravity="end"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:text="4s" />
+
+        <TextView
+            android:gravity="end"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:text="6s" />
+
+        <TextView
+            android:gravity="end"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="SR" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:id="@+id/llDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llTitla">
+
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/playerName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:singleLine="true"
+            android:text="Player Name" />
+
+        <TextView
+            android:textStyle="bold"
+            android:gravity="end"
+            android:id="@+id/runs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:text="128" />
+
+        <TextView
+            android:textStyle="bold"
+            android:gravity="end"
+            android:id="@+id/ballsFaced"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:text="298" />
+
+        <TextView
+            android:textStyle="bold"
+            android:gravity="end"
+            android:id="@+id/fours"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:text="2" />
+
+        <TextView
+            android:textStyle="bold"
+            android:gravity="end"
+            android:id="@+id/sixes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:text="0" />
+
+        <TextView
+            android:textStyle="bold"
+            android:gravity="end"
+            android:id="@+id/strikeRate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="41.38" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toStartOf="@+id/llDetails"
+        app:layout_constraintTop_toBottomOf="@+id/llDetails"
+        android:id="@+id/playerDismissal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="" />
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/rlTotal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerDismissal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/viewline"
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:text="Total"
+            android:layout_below="@+id/viewline"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_margin="10dp"
+            android:id="@+id/tvTotal"
+            android:layout_width="wrap_content"
+            android:text="Total"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/viewline"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_below="@+id/tvTotal"
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
