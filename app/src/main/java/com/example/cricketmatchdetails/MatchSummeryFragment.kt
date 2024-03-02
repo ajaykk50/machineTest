@@ -6,8 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.cricketmatchdetails.adapter.MatchAdapter
 import com.example.cricketmatchdetails.databinding.FragmentMatchSummeryBinding
 import com.example.cricketmatchdetails.model.Bowler
 import com.example.cricketmatchdetails.model.Player
@@ -92,18 +90,6 @@ class MatchSummeryFragment : Fragment() {
                 bundle
             )
         }
-
-
-        val adapter = matchDetails?.matchDetails?.let {
-            MatchAdapter(it) {
-
-
-            }
-        }
-
-
-        _binding.rvMatches.layoutManager = LinearLayoutManager(requireActivity())
-        _binding.rvMatches.adapter = adapter
 
     }
 
